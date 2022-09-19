@@ -1,0 +1,28 @@
+.clients {
+    display: flex;
+    &__block {
+            width: 170px;
+            height: 92px;
+            &:not(:last-child) {
+                    margin-right: 30px;
+                }
+        }
+    &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        fill: var(--bkgrd-link-color);
+        border-radius: 4px;
+        border: 1px solid #afb1b8;
+    
+        transition: fill var(--timing) var(--transition-func),
+            border-color var(--timing) var(--transition-func);
+        &:hover,
+        &:focus {
+                fill: var(--button-hero-active);
+                border-color: var(--logo-color);
+            }
+    }
+}
+

@@ -1,0 +1,62 @@
+.signup {
+    margin-left: auto;
+    &__input {
+            box-sizing: border-box;
+            width: 358px;
+            padding: 15px 16px;
+    
+            font-size: 16px;
+            line-height: 1.25;
+    
+            color: var(--link-footer-color);
+            background-color: transparent;
+    
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+            border-radius: 4px;
+            outline: none;
+    
+            transition: border var(--timing) var(--transition-func);
+            &:focus {
+                    border: 1px solid var(--logo-color);
+                }
+        }
+    &__form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        padding: 10px 28px;
+        border: none;
+        margin-left: 12px;
+    
+        background: var(--logo-color);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 4px;
+    
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.99;
+        letter-spacing: 0.06em;
+    
+        color: var(--main-bkgrd-color);
+        transition: background-color var(--timing) var(--transition-func);
+    
+        cursor: pointer;
+        &:hover,
+        &:focus {
+                background-color: var(--button-hero-active);
+            }
+    }
+    &__icon {
+        margin-left: 10px;
+        width: 24px;
+        height: 24px;
+        fill: var(--main-bkgrd-color);
+    }
+}

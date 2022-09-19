@@ -1,0 +1,15 @@
+.connect {
+    margin-left: 70px;
+    & .icon {
+            fill: var(--main-bkgrd-color);
+        }
+    & .social-block-link {
+        background-color: var(--bkgrd-link-sec-color);
+    
+        transition: background-color var(--timing) var(--transition-func);
+        &:focus,
+        &:hover {
+                background-color: var(--logo-color);
+            }
+    }
+}

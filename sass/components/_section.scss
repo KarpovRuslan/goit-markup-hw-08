@@ -1,0 +1,17 @@
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+    &-title {
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 1.17;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+    &-components {
+        display: flex;
+        & .occupation-thumb + .occupation-thumb {
+                margin-left: 30px;
+            }
+    }
+}

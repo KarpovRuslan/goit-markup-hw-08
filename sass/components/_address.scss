@@ -1,0 +1,21 @@
+.address {
+    margin-top: 20px;
+    &__link--accent{
+            font-style: normal;
+            color: var(--main-bkgrd-color);
+            text-decoration: none;
+        }
+    &__link{
+            font-style: normal;
+            color: var(--link-footer-color);
+            text-decoration: none;
+    
+            transition: color var(--timing) var(--transition-func);
+            &:hover, &:focus{
+                    color: var(--logo-color);
+                }
+        }
+    &__item:not(:last-child){
+            margin-bottom: 9px;
+        }
+}
