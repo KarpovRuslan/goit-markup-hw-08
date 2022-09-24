@@ -2,16 +2,33 @@
     padding-top: 94px;
     padding-bottom: 94px;
     &-title {
-            font-weight: 700;
-            font-size: 36px;
-            line-height: 1.17;
             text-align: center;
-            margin-bottom: 50px;
+            font-weight: 700;
+            line-height: 1.17;
+            margin-bottom: 30px;
+            font-size: 28px;
+            @media screen and (min-width: 1200px) {
+                font-size: 36px;
+                margin-bottom: 50px;
+            }
+            
         }
     &-components {
         display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: -30px;
+
+        @media screen and (min-width: 768px) {
+                margin-left: -30px;
+            }
         & .occupation-thumb + .occupation-thumb {
                 margin-left: 30px;
             }
     }
+    &.occupation {  
+        @media screen and (max-width: 1200px) {
+        display: none;
+    }
+        }
 }

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Homework7</title>
+    <title>Homework8</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -24,6 +24,96 @@
         <a href="./index.html" class="logo"
           ><span class="logo--accent">Web</span>Studio</a
         >
+        <div class="mobile">
+          <button
+            data-menu-button
+            type="button"
+            class="mobile-menu-btn js-open-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg
+              width="40px"
+              height="40px"
+              aria-label="Перемикач мобільного меню"
+            >
+              <use
+                class="icon-mob-menu"
+                href="./images/icons.svg#mob-menu"
+              ></use>
+              <use
+                class="icon-mob-menu-close"
+                href="./images/icons.svg#mob-menu-close"
+              ></use>
+            </svg>
+          </button>
+          <div data-menu class="mobile-menu">
+            <nav>
+              <ul class="mobile-menu__list">
+                <li class="mobile-menu__item">
+                  <a
+                    href="./index.html"
+                    class="mobile-menu__link mobile-menu__link--active"
+                    >Студія</a
+                  >
+                </li>
+                <li class="mobile-menu__item">
+                  <a href="./portfolio.html" class="mobile-menu__link"
+                    >Портфоліо</a
+                  >
+                </li>
+                <li class="mobile-menu__item">
+                  <a href="" class="mobile-menu__link">Контакти</a>
+                </li>
+              </ul>
+            </nav>
+            <a class="mobile-menu__tel" href="tel:+380961111111">
+              +38 096 111 11 11
+            </a>
+            <a class="mobile-menu__mail" href="mailto:info@devstudio.com">
+              info@devstudio.com
+            </a>
+            <ul class="mobile-menu__social-list">
+              <li class="mobile-menu__social-item">
+                <a
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  href=""
+                  class="mobile-menu__social-link line"
+                  >Instagram</a
+                >
+              </li>
+              <li class="mobile-menu__social-item">
+                <a
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  href=""
+                  class="mobile-menu__social-link"
+                  >Twitter</a
+                >
+              </li>
+              <li class="mobile-menu__social-item">
+                <a
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  href=""
+                  class="mobile-menu__social-link"
+                  >Facebook</a
+                >
+              </li>
+              <li class="mobile-menu__social-item">
+                <a
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  href=""
+                  class="mobile-menu__social-link"
+                  >LinkedIn</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
         <nav>
           <ul class="menu-nav">
             <li class="menu-nav__list">
@@ -170,11 +260,17 @@
           <h2 class="section-title">Наша команда</h2>
           <ul class="section-components">
             <li class="member-card">
-              <img
-                src="./images/team/img1.jpg"
-                alt="Ігор Дем'яненко"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/img1.jpg   1x,
+                    ./images/team/img1@2.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img src="./images/team/img1.jpg" alt="Ігор Дем'яненко" />
+              </picture>
+
               <div class="member-card__block">
                 <h3 class="member-card__name">Ігор Дем'яненко</h3>
                 <p class="member-card__department">Product Designer</p>
@@ -231,11 +327,7 @@
               </div>
             </li>
             <li class="member-card">
-              <img
-                src="./images/team/img2.jpg"
-                alt="Ольга Рєпіна"
-                width="270"
-              />
+              <img src="./images/team/img2.jpg" alt="Ольга Рєпіна" />
               <div class="member-card__block">
                 <h3 class="member-card__name">Ольга Рєпіна</h3>
                 <p class="member-card__department">Frontend Developer</p>
@@ -292,11 +384,7 @@
               </div>
             </li>
             <li class="member-card">
-              <img
-                src="./images/team/img3.jpg"
-                alt="Микола Тарасов"
-                width="270"
-              />
+              <img src="./images/team/img3.jpg" alt="Микола Тарасов" />
               <div class="member-card__block">
                 <h3 class="member-card__name">Микола Тарасов</h3>
                 <p class="member-card__department">Marketing</p>
@@ -353,11 +441,7 @@
               </div>
             </li>
             <li class="member-card">
-              <img
-                src="./images/team/img4.jpg"
-                alt="Михайло Єрмаков"
-                width="270"
-              />
+              <img src="./images/team/img4.jpg" alt="Михайло Єрмаков" />
               <div class="member-card__block">
                 <h3 class="member-card__name">Михайло Єрмаков</h3>
                 <p class="member-card__department">UI Designer</p>
@@ -669,5 +753,6 @@
     </div>
     <!-- Script of modal Icon -->
     <script src="./js/modal.js"></script>
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>

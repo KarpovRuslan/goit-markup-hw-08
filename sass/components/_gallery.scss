@@ -1,6 +1,5 @@
 .gallery {
-    display: flex;
-    flex-wrap: wrap;
+    display: block;
     margin-left: calc(-1 * var(--card-set-gap));
     margin-top: calc(-1 * var(--card-set-gap));
     &__description {
