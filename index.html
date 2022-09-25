@@ -225,27 +225,48 @@
           <h2 class="section-title">Чим ми займаємося</h2>
           <ul class="section-components">
             <li class="occupation-thumb">
-              <img
-                src="./images/img1.jpg"
-                alt="набір коду на клавіатурі"
-                width="370"
-              />
+              <picture>
+                <source
+                  srcset="./images/img1.jpg 1x, ./images/img1@2x.jpg 2x"
+                />
+                <img
+                  src="./images/img1.jpg"
+                  alt="набір коду на клавіатурі"
+                  width="370"
+                />
+              </picture>
               <div class="occupation-thumb__image">
                 <p class="occupation-thumb__name">Десктопні додатки</p>
               </div>
             </li>
             <li class="occupation-thumb">
-              <img
-                src="./images/img2.jpg"
-                alt="макет майбутнього дизайну сторінки або застосунку"
-                width="370"
-              />
+              <picture>
+                <source
+                  srcset="./images/img2.jpg 1x, ./images/img2@2x.jpg 2x"
+                />
+                <img
+                  src="./images/img2.jpg"
+                  alt="макет майбутнього дизайну сторінки або застосунку"
+                  width="370"
+                />
+              </picture>
+
               <div class="occupation-thumb__image">
                 <p class="occupation-thumb__name">Мобільні додатки</p>
               </div>
             </li>
             <li class="occupation-thumb">
-              <img src="./images/img3.jpg" alt="палітра кольорів" width="370" />
+              <picture>
+                <source
+                  srcset="./images/img3.jpg 1x, ./images/img3@2x.jpg 2x"
+                />
+                <img
+                  src="./images/img3.jpg"
+                  alt="палітра кольорів"
+                  width="370"
+                />
+              </picture>
+
               <div class="occupation-thumb__image">
                 <p class="occupation-thumb__name">Дизайнерські рішення</p>
               </div>
@@ -839,6 +860,7 @@
     </div>
     <!-- Script of modal Icon -->
     <script src="./js/modal.js"></script>
+    <!-- Script of Modile Menu -->
     <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>

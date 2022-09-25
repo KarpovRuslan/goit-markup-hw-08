@@ -1,6 +1,10 @@
 .section {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    @media screen and (min-width: 1200px) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
     &-title {
             text-align: center;
             font-weight: 700;
@@ -22,12 +26,9 @@
         @media screen and (min-width: 768px) {
                 margin-left: -30px;
             }
-        & .occupation-thumb + .occupation-thumb {
-                margin-left: 30px;
-            }
     }
     &.occupation {  
-        @media screen and (max-width: 1200px) {
+        @media screen and (max-width: 1199px) {
         display: none;
     }
         }

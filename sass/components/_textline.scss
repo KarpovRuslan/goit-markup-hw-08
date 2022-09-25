@@ -1,4 +1,8 @@
 .textline {
-    font-size: 14px;
-    line-height: 1.71;
+    font-size: 12px;
+    line-height: 1.17;
+    @media screen and (min-width:1199px) {
+        font-size: 14px;
+        line-height: 1.71;
+    }
 }

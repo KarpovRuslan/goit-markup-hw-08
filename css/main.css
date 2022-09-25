@@ -96,8 +96,14 @@ img {
   }
 }
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 .section-title {
   text-align: center;
@@ -123,10 +129,7 @@ img {
     margin-left: -30px;
   }
 }
-.section-components .occupation-thumb + .occupation-thumb {
-  margin-left: 30px;
-}
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
   .section.occupation {
     display: none;
   }
@@ -546,6 +549,8 @@ img {
 }
 .occupation-thumb {
   position: relative;
+  margin-top: 30px;
+  margin-left: 30px;
 }
 .occupation-thumb__image {
   position: absolute;
@@ -559,7 +564,9 @@ img {
 }
 .occupation-thumb__name {
   position: absolute;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 70px;
   bottom: 0;
@@ -871,9 +878,20 @@ img {
 }
 
 .filter {
-  display: block;
-  justify-content: center;
-  margin-bottom: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 768px) {
+  .filter {
+    margin-bottom: 30px;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .filter {
+    margin-bottom: 50px;
+  }
 }
 .filter__button {
   font-weight: 500;
@@ -902,11 +920,24 @@ img {
 .filter__item:not(:last-child) {
   margin-right: 8px;
 }
+.filter__item:first-child {
+  margin-bottom: 15px;
+}
+@media screen and (min-width: 768px) {
+  .filter__item:first-child {
+    margin-bottom: 0;
+  }
+}
 
 .gallery {
-  display: block;
-  margin-left: calc(-1 * var(--card-set-gap));
+  display: flex;
+  flex-wrap: wrap;
   margin-top: calc(-1 * var(--card-set-gap));
+}
+@media screen and (min-width: 768px) {
+  .gallery {
+    margin-left: calc(-1 * var(--card-set-gap));
+  }
 }
 .gallery__description {
   font-style: normal;
@@ -930,6 +961,7 @@ img {
   text-decoration: none;
   margin-bottom: 0;
   display: inline-block;
+  height: 100%;
   transition: box-shadow var(--timing) var(--transition-func);
 }
 .gallery__link:hover, .gallery__link:focus {
@@ -951,15 +983,24 @@ img {
   padding: 63px 24px;
 }
 .gallery__item {
-  margin-left: var(--card-set-gap);
   margin-top: var(--card-set-gap);
-  flex-basis: calc(33.3333333333% - var(--card-set-gap));
-}
-.gallery__lowblock {
-  padding: 20px 24px;
   border-left: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
+}
+@media screen and (min-width: 768px) {
+  .gallery__item {
+    flex-basis: calc((100% - 2 * var(--card-set-gap)) / 2);
+    margin-left: var(--card-set-gap);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .gallery__item {
+    flex-basis: calc(33.3333333333% - var(--card-set-gap));
+  }
+}
+.gallery__lowblock {
+  padding: 20px 24px;
 }
 
 .overlay {
@@ -999,11 +1040,18 @@ img {
   left: 50%;
   transform: scale(1) translate(-50%, -50%);
   transition: transform var(--timing) var(--transition-func);
-  width: 528px;
+  width: 450px;
   padding: 40px;
+  min-width: 320px;
+  max-width: 100%;
   background-color: var(--main-bkgrd-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+  }
 }
 .modal__close-btn {
   position: absolute;
@@ -1029,10 +1077,15 @@ img {
 .form__title {
   font-weight: 700;
   font-size: 20px;
-  line-height: 23px;
+  line-height: 1.5;
   text-align: center;
   color: var(--main-text-color);
   margin-bottom: 12px;
+}
+@media screen and (min-width: 1200px) {
+  .form__title {
+    line-height: 1.15;
+  }
 }
 .form__field {
   display: block;
@@ -1077,14 +1130,19 @@ img {
   transition: fill var(--timing) var(--transition-func);
 }
 .form__checkbox {
-  display: inline-flex;
+  display: flex;
+  align-items: center;
   margin-top: 20px;
   margin-bottom: 30px;
-  margin-left: 12px;
   cursor: pointer;
 }
+@media screen and (min-width: 1200px) {
+  .form__checkbox {
+    margin-left: 12px;
+  }
+}
 .form__checkbox-text {
-  padding-left: 15px;
+  padding-left: 8px;
   color: var(--second-text-color);
 }
 .form__checkbox-check:checked + .form__checkbox-icon {
@@ -1156,6 +1214,12 @@ img {
 }
 
 .textline {
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
+}
+@media screen and (min-width: 1199px) {
+  .textline {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }/*# sourceMappingURL=main.css.map */

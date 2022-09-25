@@ -5,8 +5,14 @@
     transform: scale(1) translate(-50%, -50%);
     transition: transform var(--timing) var(--transition-func);
 
-    width: 528px;
+    width: 450px;
     padding: 40px;
+    min-width: 320px;
+    max-width: 100%;
+
+    @media screen and (min-width: 1200px) {
+        width: 528px;
+    }
 
     background-color: var(--main-bkgrd-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),

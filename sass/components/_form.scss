@@ -4,12 +4,16 @@
     &__title {
             font-weight: 700;
             font-size: 20px;
-            line-height: 23px;
+            line-height: 1.5; 
             text-align: center;
-    
+        
             color: var(--main-text-color);
     
             margin-bottom: 12px;
+
+            @media screen  and (min-width: 1200px) {
+                line-height: 1.15
+            }
         }
     &__field {
         display: block;
@@ -58,13 +62,18 @@
         transition: fill var(--timing) var(--transition-func);
     }
     &__checkbox {
-        display: inline-flex;
+        display: flex;
+        align-items: center;
+        
         margin-top: 20px;
         margin-bottom: 30px;
-        margin-left: 12px;
+        
+        @media screen and (min-width:1200px) {
+            margin-left: 12px;
+        }
         cursor: pointer;
         &-text {
-                padding-left: 15px;
+                padding-left: 8px;
                 color: var(--second-text-color);
             }
         &-check:checked+.form__checkbox-icon {
