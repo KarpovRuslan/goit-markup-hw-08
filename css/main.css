@@ -313,6 +313,21 @@ img {
   background-size: cover;
   background-repeat: no-repeat;
 }
+@media screen and (min-width: 768px) {
+  .hero {
+    max-width: 1200px;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/tablet/bg_hero.jpg");
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero {
+    max-width: 1600px;
+    height: 600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/bg_hero.jpg");
+  }
+}
 .hero__title {
   font-weight: 900;
   font-size: 26px;
@@ -332,19 +347,6 @@ img {
 @media screen and (max-width: 1199px) {
   .hero__title {
     max-width: 360px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .hero {
-    max-width: 768px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .hero {
-    max-width: 1200px;
-    height: 600px;
-    padding-top: 200px;
-    padding-bottom: 200px;
   }
 }
 

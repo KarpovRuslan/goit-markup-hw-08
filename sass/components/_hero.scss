@@ -1,3 +1,4 @@
+
 .hero {
     max-width: 768px;
     height: 400px;
@@ -11,10 +12,33 @@
     background-image: linear-gradient(to right,
             rgba(47, 48, 58, 0.4),
             rgba(47, 48, 58, 0.4)),
-        url("../images/mobile/bg_hero.jpg");
+        url("../images/mobile/bg_hero@2x.jpeg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    @media screen and (min-width:768px) {
+        max-width: 1200px;
+        background-image: linear-gradient(to right,
+                    rgba(47, 48, 58, 0.4),
+                    rgba(47, 48, 58, 0.4)),
+                url("../images/tablet/bg_hero.jpg");
+    }
+    @media screen and (min-width:1200px) {
+        max-width: 1600px;
+        height: 600px;
+        padding-top: 200px;
+        padding-bottom: 200px;
+        background-image: linear-gradient(to right,
+                    rgba(47, 48, 58, 0.4),
+                    rgba(47, 48, 58, 0.4)),
+                url("../images/bg_hero.jpg");
+    }
+
+    
+    }
+
+
+
     &__title {
             
             font-weight: 900;
@@ -35,15 +59,30 @@
             }
             
         }
-    
 
-    @media screen and ( min-width: 768px) {
-        max-width: 768px;
-    }
-    @media screen and (min-width: 1200px) {
-            max-width: 1200px;
-            height: 600px;
-            padding-top: 200px;
-            padding-bottom: 200px;
+
+@media screen and (min-device-pixel-ratio: 2),
+screen and (-webkit-min-device-pixel-ratio: 2),
+screen and (min-resolution: 192dpi),
+screen and (min-resolution: 2dppx) {
+    .hero {
+        background-image: linear-gradient(to right,
+                rgba(47, 48, 58, 0.4),
+                rgba(47, 48, 58, 0.4)),
+            url("../images/mobile/bg_hero@2x.jpg");
+
+        @media screen and (min-width: 768px) {
+            background-image: linear-gradient(to right,
+                    rgba(47, 48, 58, 0.4),
+                    rgba(47, 48, 58, 0.4)),
+                url("../images/tablet/bg_hero@2x.jpg");
+        }
+
+        @media screen and (min-width: 1200px) {
+            background-image: linear-gradient(to right,
+                    rgba(47, 48, 58, 0.4),
+                    rgba(47, 48, 58, 0.4)),
+                url("../images/bg_hero@2x.jpg");
+        }
     }
 }
