@@ -1,14 +1,19 @@
 .modal {
     position: absolute;
+    z-index:2;
     top: 50%;
     left: 50%;
     transform: scale(1) translate(-50%, -50%);
     transition: transform var(--timing) var(--transition-func);
 
     width: 450px;
-    padding: 40px;
+    padding: auto;
     min-width: 320px;
     max-width: 100%;
+
+    @media screen and (min-width: 480px) {
+        padding: 40px;
+    }
 
     @media screen and (min-width: 1200px) {
         width: 528px;
@@ -22,6 +27,7 @@
             position: absolute;
             top: 8px;
             right: 8px;
+            padding: 0;
     
             display: block;
             width: 30px;

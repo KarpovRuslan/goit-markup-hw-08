@@ -311,7 +311,7 @@ img {
   margin-left: auto;
   margin-right: auto;
   background-color: var(--second-bkgrd-color);
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/mobile/bg_hero.jpeg");
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/mobile/bg_hero.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -408,7 +408,7 @@ img {
   color: var(--logo-color);
 }
 .mobile-menu-btn {
-  z-index: 3;
+  z-index: 5;
   position: absolute;
   top: 10px;
   right: 15px;
@@ -442,7 +442,7 @@ img {
   letter-spacing: 0.02em;
   color: #2196F3;
   text-decoration: none;
-  margin-top: 302px;
+  margin-top: auto;
 }
 .mobile-menu__mail {
   font-size: 24px;
@@ -527,6 +527,11 @@ img {
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 10px;
+}
+@media screen and (min-width: 768px) {
+  .features__subtitle {
+    text-align: left;
+  }
 }
 .features__text {
   font-size: 14px;
@@ -1011,11 +1016,12 @@ img {
   height: 100%;
   background-color: rgba(33, 150, 243, 0.9);
   transition: transform var(--timing) var(--transition-func);
-  transform: translateY(100%);
+  transform: translateY(101%);
 }
 
 .backdrop {
   position: fixed;
+  z-index: 1;
   top: 0;
   left: 0;
   width: 100%;
@@ -1036,17 +1042,23 @@ img {
 
 .modal {
   position: absolute;
+  z-index: 2;
   top: 50%;
   left: 50%;
   transform: scale(1) translate(-50%, -50%);
   transition: transform var(--timing) var(--transition-func);
   width: 450px;
-  padding: 40px;
+  padding: auto;
   min-width: 320px;
   max-width: 100%;
   background-color: var(--main-bkgrd-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+}
+@media screen and (min-width: 480px) {
+  .modal {
+    padding: 40px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .modal {
@@ -1057,6 +1069,7 @@ img {
   position: absolute;
   top: 8px;
   right: 8px;
+  padding: 0;
   display: block;
   width: 30px;
   height: 30px;
